@@ -1,0 +1,23 @@
+<div class="container app">
+  <div class="row header py-5">
+    <div class="col-9">
+      <h1 class="titulo">To do list</h1>
+      <h4 class="subtitulo">{{fecha | date: 'EEEE, dd' : 'GMT-5' : 'es' }} <span class="st-span">de</span>
+        {{fecha | date: 'MMMM' : 'GMT-5' : 'es' }}
+      </h4>
+    </div>
+    <div class="col-3 v-centrado">
+      <i class="fa fa-user-circle-o img-usuario"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2 class="titulo-tareas mt-4">Tareas <span class="tareas-asignadas">({{tareas.length}} {{ tareas.length | i18nPlural: itemPluralMapping['tarea'] }})</span>
+      </h2>
+    </div>
+    <div class="col-12">
+      <app-tarea *ngFor="let t of tareas" [tarea]="t" (borrada)="borrarTarea($event)"></app-tarea>
+    </div>
+  </div>
+  <button class="btn agregar" (click)="agregarTarea()"><i class="fa fa-plus"></i></button>
+</div>

@@ -1,0 +1,49 @@
+<div class="tarea">
+  <div class="row">
+    <div class="col-6 estado" [ngClass]="estaActiva() ? 'activa' : 'finalizada'">
+      {{tarea.estado}}
+    </div>
+    <div class="col-6 div-tiempo justify-content-end">
+      <button class="btn btn-tiempo" *ngIf="estaActiva()">
+        Agregar tiempo
+      </button>
+    </div>
+  </div>
+  <hr>
+  <div class="row mb-4">
+    <div class="col-5 v-centrado">
+      <i class="fa fa-user-circle-o icono-usuario"></i>
+      <span class="titulo-texto responsable">{{tarea.responsable}}</span>
+    </div>
+    <div class="col-7 v-centrado">
+      <div class="v-centrado" *ngIf="estaActiva()">
+        <i class="fa fa-clock-o icono-tiempo"></i>
+        <span class="titulo-texto tiempo">Tiempo restante: {{tarea.tiempoRestante * 60000 | date:'H:mm':'UTC'}}
+          hrs:mm</span>
+      </div>
+    </div>
+  </div>
+  <div class="row ml-1 tarea-info">
+    <div class="col-10 tarea-titulo">{{tarea.titulo}}</div>
+    <div class="col-2">
+      <nav class="navbar p-0">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn tarea-acciones" id="dropdownTask" ngbDropdownToggle>
+            <i class="fa fa-ellipsis-v"></i>
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownTask" class="dropdown-menu dropdown-menu-right tarea-menu">
+            <button ngbDropdownItem class="tarea-menu-item btn-ver-tarea px-3"><i class="fa fa-eye icono-ver"></i><span
+                class="titulo-texto">Ver tarea</span></button>
+            <button ngbDropdownItem class="tarea-menu-item btn-borrar-tarea px-3" (click)="borrar()"><i
+                class="fa fa-trash icono-borrar"></i><span class="titulo-texto">Borrar</span></button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="col-12 tarea-desc">
+      {{tarea.descripcion}}
+    </div>
+  </div>
+
+
+</div>

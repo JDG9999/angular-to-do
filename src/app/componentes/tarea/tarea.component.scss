@@ -1,0 +1,107 @@
+.tarea {
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 15px;
+  padding: 15px;
+}
+
+.estado {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.div-tiempo {
+  display: flex;
+}
+
+.v-centrado {
+  display: flex;
+  align-items: center;
+}
+
+.icono-usuario {
+  font-size: 24px;
+}
+
+.icono-tiempo {
+  font-size: 16px;
+  color: #010C3B;
+}
+
+.titulo-texto {
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.responsable {
+  color: #010C3B;
+}
+
+.tiempo {
+  color: #333D69;
+}
+
+.tarea-info {
+  border-left: 4px solid #2DC09D;
+}
+
+.tarea-titulo {
+  color: #333D69;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tarea-desc {
+  color: #333D69;
+  opacity: 70%;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.tarea-menu {
+  border-radius: 8px;
+  min-width: 0px;
+}
+
+.tarea-menu-item {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  width: 110px;
+}
+
+.activa {
+  color: #2DC09D;
+}
+
+.finalizada {
+  color: #DC3646;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.btn-tiempo {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #425195;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tarea-acciones {
+  cursor: pointer;
+  color: #B9BCC4;
+}
+
+.btn-ver-tarea {
+  color: #425195;
+}
+
+.btn-borrar-tarea {
+  color: #B8BBC3;
+}

@@ -1,0 +1,59 @@
+.app {
+  max-width: 100%;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.v-centrado {
+  display: flex;
+  align-items: center;
+}
+
+.img-usuario {
+  font-size: 48px;
+}
+
+.titulo {
+  color: #010C3B;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.subtitulo {
+  text-transform: capitalize;
+  opacity: 70%;
+  color: #425195;
+  font-size: 14px;
+}
+
+.titulo-tareas {
+  color: #010C3B;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.tareas-asignadas {
+  font-size: 13px;
+  font-weight: bold;
+  color: #425195;
+}
+
+.st-span {
+  text-transform: lowercase;
+}
+
+.agregar {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #425195;
+  font-size: 25px;
+  height: 64px;
+  width: 64px;
+  padding: 0px;
+  line-height: 30px;
+}
